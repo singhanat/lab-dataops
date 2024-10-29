@@ -3,9 +3,11 @@ LAB : DataOps
 
 ![CI/CD](img/cicd.png)
 
-## Lab 0 : ออกแบบ Data pipeline และ test
+## Lab 0 : ออกแบบ Data pipeline และ test case
 
+![pipeline-design](img/pipeline-design.png)
 
+![defining-metrics](img/defining-metrics.png)
 
 ## Lab 1 : Upload files
 
