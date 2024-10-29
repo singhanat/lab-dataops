@@ -335,6 +335,8 @@ jobs:
         run: |
             databricks jobs run-now --job-id <PROD_JOB_ID>
 ```
-## Lab 19 : ดูผลลัพธ์ของ CD
+## Lab 19 : pull request และ merge dev เข้าสู่ main
+
+## Lab 20 : ดูผลลัพธ์ของ CD
 
 
