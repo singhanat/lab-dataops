@@ -207,11 +207,11 @@ f.close()
 
 ## Lab 12 : สร้าง workflow สำหรับ test
 
-![test-job](test-job.png)
+![test-job](img/test-job.png)
 
 ## Lab 13 : สร้าง workflow สำหรับ production
 
-![prod-job](prod-job.png)
+![prod-job](img/prod-job.png)
 
 ## Lab 14 : สร้าง databricks access token
 1. คลิก avatar ของท่านที่มุมบนขวาสุดในหน้าจอ Databricks เพื่อเปิดเมนู
