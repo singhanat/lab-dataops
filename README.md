@@ -285,6 +285,9 @@ jobs:
       - name: Deploy test to databricks workspace
         run: |
             databricks workspace import "test.py" "<YOUR_DATABRICKS_WORKSPACE_PATH>/test/test" --language python --overwrite
+      - name: Run test job
+        run: |
+            databricks jobs run-now --job-id <TEST_JOB_ID>
 ```
 
 ## Lab 17 : ดูผลลัพธ์ของ CI
@@ -328,6 +331,9 @@ jobs:
       - name: Deploy code to databricks workspace
         run: |
             databricks workspace import "pipeline.py" "/Users/singhanat.rer@kmutt.ac.th/prod/pipeline" --language python --overwrite
+      - name: Run production job
+        run: |
+            databricks jobs run-now --job-id <PROD_JOB_ID>
 ```
 ## Lab 19 : ดูผลลัพธ์ของ CD
 
