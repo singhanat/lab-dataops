@@ -92,7 +92,7 @@ TEST_RESULT_PATH=<YOUR_WORKSPACE_PATH>/test_result.csv
 ```
   
 2. แก้ไข notebook ชื่อ pipeline
-```
+```python
 import pandas as pd
 import math
 import os
@@ -120,7 +120,7 @@ tracks.to_csv(outputPath, index=False)
 ```
 
 3. แก้ไข notebook ชื่อ test 
-```
+```python
 import pandas as pd
 import configparser
 import os
