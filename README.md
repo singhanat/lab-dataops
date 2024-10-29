@@ -340,6 +340,8 @@ jobs:
 ```
 ## Lab 19 : pull request และ merge dev เข้าสู่ main
 
+![](img/pull.png)
+
 ## Lab 20 : ดูผลลัพธ์ของ CD
 
 ![](img/prod-result.png)
