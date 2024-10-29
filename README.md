@@ -199,6 +199,8 @@ f.close()
 
 ## Lab 11 : สร้าง folder ใน workspace สำหรับเป็น test environment และ production environment
 
+![folder](img/folder.png)
+
 ## Lab 12 : สร้าง workflow สำหรับ test
 
 ## Lab 13 : สร้าง workflow สำหรับ production
