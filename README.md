@@ -76,3 +76,5 @@ f.close()
 ## Lab 5 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
 
 ## Lab 6 : ย้ายไฟล์ notebook เข้ามายัง git folder
+
+## Lab 7 : commit และ push ไฟล์ใน git folder เข้ามายัง github repository
