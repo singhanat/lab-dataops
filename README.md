@@ -69,4 +69,10 @@ else:
 f.close()
 ```
 
-## Lab 3 : สร้าง github repository สำหรับ data pipeline
+## Lab 3 : สร้าง github repository ชื่อ chinook-datapipeline สำหรับ data pipeline
+
+## Lab 4 : เชื่อม databricks account กับ github account 
+
+## Lab 5 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
+
+## Lab 6 : ย้ายไฟล์ notebook เข้ามายัง git folder
