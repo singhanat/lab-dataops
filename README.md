@@ -177,3 +177,21 @@ f.close()
 8. จะปรากฎ Access Token ขอให้ท่าน copy เก็บไว้ในที่ปลอดภัยก่อน เพราะมันจะปรากฎให้ท่านเห็นเพียงครั้งเดียวเท่านั้น
 
 # Lab 10 : นำ Access Token ไปสร้างเป็น Secret บน Github
+1. เข้าไปที่ URL
+```
+https://github.com/<YOUR_USERNAME>/chinook-pipeline
+```
+2. ไปที่ tab ชื่อว่า Settings
+3. คลิก Secrets and variables บน side menu เพื่อเปิดเมนูย่อย
+4. คลิก Actions
+5. ไปที่ส่วน Repository secrets
+6. คลิก New repository secret
+7. ระบุ Name ว่า DATABRICKS_TOKEN
+8. ระบุ Secret เป็น token ที่สร้างจาก Databricks ใน lab ก่อนหน้า
+9. คลิก Add Secret
+10. คลิก New repository secret อีกครั้ง
+11. ระบุ Name ว่า DATABRICKS_HOST_URL
+12. ระบุ Secret เป็น URL ของ Databricks ที่ท่านใช้อยู่ (URL ที่ admin ส่งให้ท่านใช้สำหรับเข้าใช้ Databricks)
+13. คลิก Add Secret
+
+เมื่อเสร็จทั้ง 13 ขั้นตอน ท่านจะได้ Secret จำนวน 2 ตัว คือ DATABRICKS_TOKEN และ DATABRICKS_HOST_URL ซึ่งท่านจะต้องนำไปใช้ใน github actions
