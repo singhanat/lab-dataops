@@ -95,6 +95,8 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 
 ## Lab 6 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
 
+![create-git-folder](img/create-git-folder.png) 
+
 ## Lab 7 : เลือก branch ที่ git folder บน databricks เป็น dev
 
 ## Lab 8 : ย้ายไฟล์ notebook เข้ามายัง git folder
