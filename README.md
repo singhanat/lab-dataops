@@ -204,17 +204,18 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 
 เมื่อเสร็จทั้ง 13 ขั้นตอน ท่านจะได้ Secret จำนวน 2 ตัว คือ DATABRICKS_TOKEN และ DATABRICKS_HOST_URL ซึ่งท่านจะต้องนำไปใช้ใน github actions
 
-## Lab 16 : 
+## Lab 16 : CI
 1. เข้าไปที่ URL
 ```
 https://github.com/<YOUR_USERNAME>/chinook-pipeline
 ```
-2. คลิก Add file แล้วเลือก Create new file
-3. ระบุไฟล์ path เป็น
+2. เลือก branch เป็น dev
+3. คลิก Add file แล้วเลือก Create new file
+4. ระบุไฟล์ path เป็น
 ```
 .github/workflows/ci.yml
 ```
-4. ระบุ file content เป็น
+5. ระบุ file content เป็น
 ```yml
 name: CI for chinook pipeline
 on: 
@@ -241,8 +242,54 @@ jobs:
             EOF
       - name: Deploy code to databricks workspace
         run: |
-            databricks workspace import "pipeline.py" "/Users/singhanat.rer@kmutt.ac.th/test/pipeline.py" --language python --overwrite
+            databricks workspace import "pipeline.py" "<YOUR_DATABRICKS_WORKSPACE_PATH>/test/pipeline" --language python --overwrite
       - name: Deploy test to databricks workspace
         run: |
-            databricks workspace import "test.py" "/Users/singhanat.rer@kmutt.ac.th/test/test.py" --language python --overwrite
+            databricks workspace import "test.py" "<YOUR_DATABRICKS_WORKSPACE_PATH>/test/test" --language python --overwrite
 ```
+
+## Lab 17 : ดูผลลัพธ์ของ CI
+
+## Lab 18 : CD
+1. เข้าไปที่ URL
+```
+https://github.com/<YOUR_USERNAME>/chinook-pipeline
+```
+2. เลือก branch เป็น dev
+3. คลิก Add file แล้วเลือก Create new file
+4. ระบุไฟล์ path เป็น
+```
+.github/workflows/cd.yml
+```
+5. ระบุ file content เป็น
+```yml
+name: CD for chinook pipeline
+on: 
+  push:
+    branches: [main]
+jobs:
+  push_to_databricks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+      - name: Databricks CLI config
+        run: |
+            pip install databricks-cli
+            cat > ~/.databrickscfg << EOF
+            [DEFAULT]
+            host = ${{ secrets.DATABRICKS_HOST_URL }}
+            token = ${{ secrets.DATABRICKS_TOKEN }}
+            jobs-api-version = 2.1
+            EOF
+      - name: Deploy code to databricks workspace
+        run: |
+            databricks workspace import "pipeline.py" "/Users/singhanat.rer@kmutt.ac.th/prod/pipeline" --language python --overwrite
+```
+## Lab 19 : ดูผลลัพธ์ของ CD
+
+
