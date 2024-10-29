@@ -292,6 +292,9 @@ jobs:
 
 ## Lab 17 : ดูผลลัพธ์ของ CI
 
+![](img/test-result.png)
+
+
 ## Lab 18 : CD
 1. เข้าไปที่ URL
 ```
@@ -339,4 +342,4 @@ jobs:
 
 ## Lab 20 : ดูผลลัพธ์ของ CD
 
-
+![](img/prod-result.png)
