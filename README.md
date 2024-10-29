@@ -37,9 +37,9 @@ import pandas as pd
 from datetime import datetime
 
 # file path
-inputPath = "/Workspace/Users/singhanat.rer@kmutt.ac.th/track_small.csv"
-outputPath = "/Workspace/Users/singhanat.rer@kmutt.ac.th/output_small.csv"
-testResultPath = "/Workspace/Users/singhanat.rer@kmutt.ac.th/test_result.txt"
+inputPath = "<YOUR_WORKSPACE_PATH>/track_small.csv"
+outputPath = "<YOUR_WORKSPACE_PATH>/output_small.csv"
+testResultPath = "<YOUR_WORKSPACE_PATH>/test_result.txt"
 
 # read files
 tracksInput = pd.read_csv(inputPath)
