@@ -15,6 +15,8 @@ upload files ชื่อ track_small.csv และ track_large.csv เข้า
 
 โดย track_small.csv สำหรับการ test และ track_large.csv สำหรับ production
 
+download file คลิก [track_small.csv](track_small.csv) และ [track_large.csv](track_large.csv)
+
 ## Lab 2 : สร้าง Data Pipeline อย่างง่าย
 
 สร้าง notebook ชื่อ pipeline ซึ่งเป็น ETL pipeline ที่ทำหน้าที่เปลี่ยนข้อมูลจาก UnitPrice ปัดค่าทศนิยมขึ้นเป็นจำนวนเต็ม โดยมี code ดังนี้
