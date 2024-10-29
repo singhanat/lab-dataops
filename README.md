@@ -14,8 +14,7 @@ upload files ชื่อ track_small.csv และ track_large.csv เข้า
 ## Lab 2 : สร้าง Data Pipeline อย่างง่าย
 
 สร้าง Notebook ชื่อ pipeline ซึ่งเป็น ETL pipeline ที่ทำหน้าที่เปลี่ยนข้อมูลจาก UnitPrice ปัดค่าทศนิยมขึ้นเป็นจำนวนเต็ม โดยมี code ดังนี้
-```
-# Databricks notebook source
+```python
 import pandas as pd
 import math
 
@@ -33,4 +32,4 @@ tracks["UnitPrice"] = tracks["UnitPrice"].apply(lambda x: math.ceil(x))
 tracks.to_csv(outputPath, index=False)
 ```
 
-## Lab 3 : 
+## Lab 3 : สร้าง github repository สำหรับ data pipeline
