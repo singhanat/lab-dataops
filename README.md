@@ -98,7 +98,7 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 ![create-git-folder](img/create-git-folder.png) 
 
 ## Lab 7 : เลือก branch ที่ git folder บน databricks เป็น dev
-
+![dev](dev.png)
 ## Lab 8 : ย้ายไฟล์ notebook เข้ามายัง git folder
 
 ## Lab 9 : commit และ push ไฟล์ใน git folder เข้ามายัง github repository
