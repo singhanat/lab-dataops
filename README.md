@@ -165,3 +165,15 @@ else:
 # close test result file
 f.close()
 ```
+
+## Lab 9 : สร้าง databricks access token
+1. คลิก avatar ของท่านที่มุมบนขวาสุดในหน้าจอ Databricks เพื่อเปิดเมนู
+2. คลิก Settings
+3. คลิก Developer
+4. เมื่อเข้าสู่หน้าจอ Developer ให้ไปที่ Access tokens
+5. คลิก manage
+6. คลิก Generate New Token
+7. ระบุ Comment และคลิก Generate
+8. จะปรากฎ Access Token ขอให้ท่าน copy เก็บไว้ในที่ปลอดภัยก่อน เพราะมันจะปรากฎให้ท่านเห็นเพียงครั้งเดียวเท่านั้น
+
+# Lab 10 : นำ Access Token ไปสร้างเป็น Secret บน Github
