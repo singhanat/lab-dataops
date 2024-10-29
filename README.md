@@ -89,6 +89,10 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 
 ## Lab 5 : เชื่อม databricks account กับ github account 
 
+1. เชื่อม databricks account และ github account ใน databricks ของท่าน เมื่อสำเร็จจะได้ผลลัพธ์ดังภาพ
+![linked-branch](img/linked-github.png)  
+2. ติดตั้ง databricks app ใน github ของท่าน โดยคลิกที่ 
+
 ## Lab 6 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
 
 ## Lab 7 : เลือก branch ที่ git folder บน databricks เป็น dev
