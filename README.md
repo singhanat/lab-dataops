@@ -3,8 +3,6 @@ LAB : DataOps
 
 ## Lab 0 : ออกแบบ Data pipeline และ test
 
-
-
 ## Lab 1 : Upload files
 
 upload files ชื่อ track_small.csv และ track_large.csv เข้าสู่ Workspace เพื่อเป็น Data source ของ Data pipeline
@@ -71,15 +69,19 @@ f.close()
 
 ## Lab 3 : สร้าง github repository ชื่อ chinook-datapipeline สำหรับ data pipeline
 
-## Lab 4 : เชื่อม databricks account กับ github account 
+## Lab 4 : สร้าง branch ชื่อ dev
 
-## Lab 5 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
+## Lab 5 : เชื่อม databricks account กับ github account 
 
-## Lab 6 : ย้ายไฟล์ notebook เข้ามายัง git folder
+## Lab 6 : clone github repositoy ชื่อ chinook-datapipeline มาเป็น git folder ใน databricks workspace
 
-## Lab 7 : commit และ push ไฟล์ใน git folder เข้ามายัง github repository
+## Lab 7 : เลือก branch ที่ git folder บน databricks เป็น dev
 
-## Lab 8 : Configuration Management
+## Lab 8 : ย้ายไฟล์ notebook เข้ามายัง git folder
+
+## Lab 9 : commit และ push ไฟล์ใน git folder เข้ามายัง github repository
+
+## Lab 10 : Configuration Management
 
 เพื่อให้สามารถเปลี่ยน data source ใน notebook ชื่อ pipeline และ test ได้โดยไม่ต้อง hard code ที่อยู่ของไฟล์ไว้ใน notebook จึงแก้ไข code ให้ผ่านที่อยู่ไฟล์ (file path) จากไฟล์ pipeline.conf ที่อยู่ใน folder เดียวกับ notebook เสมอ
 
@@ -166,7 +168,13 @@ else:
 f.close()
 ```
 
-## Lab 9 : สร้าง databricks access token
+## Lab 11 : สร้าง folder ใน workspace สำหรับเป็น test environment และ production environment
+
+## Lab 12 : สร้าง workflow สำหรับ test
+
+## Lab 13 : สร้าง workflow สำหรับ production
+
+## Lab 14 : สร้าง databricks access token
 1. คลิก avatar ของท่านที่มุมบนขวาสุดในหน้าจอ Databricks เพื่อเปิดเมนู
 2. คลิก Settings
 3. คลิก Developer
@@ -176,7 +184,7 @@ f.close()
 7. ระบุ Comment และคลิก Generate
 8. จะปรากฎ Access Token ขอให้ท่าน copy เก็บไว้ในที่ปลอดภัยก่อน เพราะมันจะปรากฎให้ท่านเห็นเพียงครั้งเดียวเท่านั้น
 
-# Lab 10 : นำ Access Token ไปสร้างเป็น Secret บน Github
+## Lab 15 : นำ Access Token ไปสร้างเป็น Secret บน Github
 1. เข้าไปที่ URL
 ```
 https://github.com/<YOUR_USERNAME>/chinook-pipeline
@@ -195,3 +203,46 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 13. คลิก Add Secret
 
 เมื่อเสร็จทั้ง 13 ขั้นตอน ท่านจะได้ Secret จำนวน 2 ตัว คือ DATABRICKS_TOKEN และ DATABRICKS_HOST_URL ซึ่งท่านจะต้องนำไปใช้ใน github actions
+
+## Lab 16 : 
+1. เข้าไปที่ URL
+```
+https://github.com/<YOUR_USERNAME>/chinook-pipeline
+```
+2. คลิก Add file แล้วเลือก Create new file
+3. ระบุไฟล์ path เป็น
+```
+.github/workflows/ci.yml
+```
+4. ระบุ file content เป็น
+```yml
+name: CI for chinook pipeline
+on: 
+  push:
+    branches: [dev]
+jobs:
+  push_to_databricks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+      - name: Databricks CLI config
+        run: |
+            pip install databricks-cli
+            cat > ~/.databrickscfg << EOF
+            [DEFAULT]
+            host = ${{ secrets.DATABRICKS_HOST_URL }}
+            token = ${{ secrets.DATABRICKS_TOKEN }}
+            jobs-api-version = 2.1
+            EOF
+      - name: Deploy code to databricks workspace
+        run: |
+            databricks workspace import "pipeline.py" "/Users/singhanat.rer@kmutt.ac.th/test/pipeline.py" --language python --overwrite
+      - name: Deploy test to databricks workspace
+        run: |
+            databricks workspace import "test.py" "/Users/singhanat.rer@kmutt.ac.th/test/test.py" --language python --overwrite
+```
