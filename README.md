@@ -333,7 +333,7 @@ jobs:
             EOF
       - name: Deploy code to databricks workspace
         run: |
-            databricks workspace import "pipeline.py" "/Users/singhanat.rer@kmutt.ac.th/prod/pipeline" --language python --overwrite
+            databricks workspace import "pipeline.py" "<YOUR_DATABRICKS_WORKSPACE_PATH>/prod/pipeline" --language python --overwrite
       - name: Run production job
         run: |
             databricks jobs run-now --job-id <PROD_JOB_ID>
