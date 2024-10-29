@@ -101,7 +101,13 @@ https://github.com/<YOUR_USERNAME>/chinook-pipeline
 ![dev](img/dev.png)
 ## Lab 8 : ย้ายไฟล์ notebook เข้ามายัง git folder
 
+ลากไฟล์ pipeline และ test มาไว้ใน git folder ที่สร้างไว้
+
 ## Lab 9 : commit และ push ไฟล์ใน git folder เข้ามายัง github repository
+
+![push](img/push.png)
+
+![commit](img/commit.png)
 
 ## Lab 10 : Configuration Management
 
