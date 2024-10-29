@@ -1,7 +1,11 @@
 # lab-dataops
 LAB : DataOps
 
+![CI/CD](img/cicd.png)
+
 ## Lab 0 : ออกแบบ Data pipeline และ test
+
+
 
 ## Lab 1 : Upload files
 
