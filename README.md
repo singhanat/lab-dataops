@@ -77,7 +77,15 @@ f.close()
 
 ## Lab 3 : สร้าง github repository ชื่อ chinook-datapipeline สำหรับ data pipeline
 
+สร้าง github repository ชื่อ chinook-datapipeline สำหรับ data pipeline
+เมื่อสร้างเสร็จแล้วท่านต้องได้ URL ของ github repository ดังนี้
+```
+https://github.com/<YOUR_USERNAME>/chinook-pipeline
+```
+
 ## Lab 4 : สร้าง branch ชื่อ dev
+เมื่อสร้าง branch ชื่อ dev สำเร็จใน github repository ของท่านต้องมี branch ดังภาพ
+![github-branch](img/github-branch.png)
 
 ## Lab 5 : เชื่อม databricks account กับ github account 
 
