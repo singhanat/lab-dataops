@@ -343,3 +343,8 @@ jobs:
 ## Lab 20 : ดูผลลัพธ์ของ CD
 
 ![](img/prod-result.png)
+
+## Lab 21 : Requirement Change
+
+user ต้องการให้ การปัดค่า UnitPrice นั้น เป็นการปัดขึ้นและบวก 1 เช่น 0.99 ก็ให้ปัดเป็น 2
+ขอให้ท่านปรับปรุง pipeline และ test case แล้วใช้ประโยชน์จาก CI/CD ที่สร้างไว้อำนวยความสะดวกให้การ test และ deploy สู่ production site
