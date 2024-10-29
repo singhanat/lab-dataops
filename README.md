@@ -201,6 +201,10 @@ f.close()
 
 ![folder](img/folder.png)
 
+![test](img/test.png)
+
+![prod](img/prod.png)
+
 ## Lab 12 : สร้าง workflow สำหรับ test
 
 ## Lab 13 : สร้าง workflow สำหรับ production
