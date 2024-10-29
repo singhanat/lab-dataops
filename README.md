@@ -195,6 +195,7 @@ else:
 # close test result file
 f.close()
 ```
+3. commit และ push ไปยัง github repository
 
 ## Lab 11 : สร้าง folder ใน workspace สำหรับเป็น test environment และ production environment
 
