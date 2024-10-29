@@ -84,7 +84,7 @@ f.close()
 เพื่อให้สามารถเปลี่ยน data source ใน notebook ชื่อ pipeline และ test ได้โดยไม่ต้อง hard code ที่อยู่ของไฟล์ไว้ใน notebook จึงแก้ไข code ให้ผ่านที่อยู่ไฟล์ (file path) จากไฟล์ pipeline.conf ที่อยู่ใน folder เดียวกับ notebook เสมอ
 
 1. สร้างไฟล์ pipeline.conf
-```conf
+```cfg
 [DEFAULT]
 INPUT_PATH=<YOUR_WORKSPACE_PATH>/track_small.csv
 OUTPUT_PATH=<YOUR_WORKSPACE_PATH>/output_small.csv
