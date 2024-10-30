@@ -357,4 +357,4 @@ user ต้องการให้ การปัดค่า UnitPrice นั
 
 โดยอ่านไฟล์จาก data source เดิม แต่ขอให้ output เป็นการแปลง UnitPrice จาก USD เป็น THB เมื่อ 1 USD = 33.77 บาท
 
-และขอให้ pipeline นี้ได้รับการจัดการ CI/CD ผ่าน Github Actions เช่นกัน (โดยท่านจะสร้าง repository ใหม่ หรือจะสร้างใน chinook-pipeline ก็ได้)
+และขอให้ pipeline นี้ได้รับการจัดการ CI/CD ผ่าน Github Actions เช่นกัน (โดยท่านจะสร้าง repository ใหม่ หรือจะสร้าง pipeline ใหม่นี้ใน repository ชื่อ chinook-pipeline อันเดิมก็ได้)
