@@ -350,3 +350,11 @@ jobs:
 
 user ต้องการให้ การปัดค่า UnitPrice นั้น เป็นการปัดขึ้นและบวก 1 เช่น 0.99 ก็ให้ปัดเป็น 2
 ขอให้ท่านปรับปรุง pipeline และ test case แล้วใช้ประโยชน์จาก CI/CD ที่สร้างไว้อำนวยความสะดวกให้การ test และ deploy สู่ production environment
+
+## Challenge
+
+เพื่อนชาว Data Scientist ที่รักขอให้ท่านสร้าง data pipeline เพิ่มอีก 1 เส้น (pipeline ที่ทำ lab มาเก็บไว้นะครับ เพื่อนของท่านยังต้องการให้มันอยู่ต่อไป) 
+
+โดยอ่านไฟล์จาก data source เดิม แต่ขอให้ output เป็นการแปลง UnitPrice จาก USD เป็น THB เมื่อ 1 USD = 33.77 บาท
+
+และขอให้ pipeline นี้ได้รับการจัดการ CI/CD ผ่าน Github Actions เช่นกัน (โดยท่านจะสร้าง repository ใหม่ หรือจะสร้างใน chinook-pipeline ก็ได้)
